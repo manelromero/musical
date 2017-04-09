@@ -5,29 +5,19 @@
     <template>
         <style>
             :host {
-                display: block;
                 width: 100%;
                 text-align: right;
                 font: 400 1rem Roboto, sans-serif;
                 background-color: #eee;
             }
 
-            .container {
-                display: flex;
-                justify-content: flex-end;
-            }
-
-            ul {
-                display: flex;
-                flex-wrap: wrap;
-                margin: 0;
-                padding: 0;
-                list-style: none;
-            }
-
             :host ::content li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 cursor: pointer;
                 padding: 0.5rem;
+                width: 100%;
                 opacity: 0.7;
                 background-color: #eee;
                 transition: opacity 0.3s, background-color 0.3s;
@@ -42,10 +32,47 @@
                 background-color: #bbb;
             }
 
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            #icon {
+                width: 30px;
+                height: 30px;
+                position: fixed;
+                top: 15px;
+                right: 15px;
+                background-repeat: no-repeat;
+                background-position: center;
+                z-index: 10;
+            }
+
+            #icon.open {
+                background-image: url('/styles/images/burger-open.svg');
+            }
+
+            #icon.close {
+                background-image: url('/styles/images/burger-close.svg');
+            }
+
+            @media only screen and (min-width: 540px) {
+                #icon {
+                    display: none;
+                }
+            }
+
+            @media only screen and (min-width: 720px) {}
+            @media only screen and (min-width: 960px) {}
+            @media only screen and (min-width: 1140px) {}
         </style>
 
-        <div class="container">
-            <ul id="list"></ul>
+        <div id="container">
+            <div id="icon" class$="{{iconState}}" on-click="_toggleIcon"></div>
+            <ul id="list" class$="{{menuVisibility}}"></ul>
         </div>
     </template>
 
@@ -58,21 +85,63 @@
                     type: Array,
                     reflectToAttribute: true,
                     observer: '_addElements'
+                },
+                menuVisibility: {
+                    type: String,
+                    value: 'hide'
+                },
+                iconState: {
+                    type: String,
+                    value: 'open'
+                }
+            },
+
+            ready: function() {
+                if (window.innerWidth > 540) {
+                    this.menuVisibility = 'show';
+                }
+            },
+
+            _hide: function() {
+                this.menuVisibility = 'hide';
+                this.iconState = 'open';
+            },
+
+            _toggleIcon: function() {
+                if (this.iconState === 'open') {
+                    this.iconState = 'close';
+                    this.menuVisibility = 'show';
+                } else {
+                    this.iconState = 'open';
+                    this.menuVisibility = 'hide';
                 }
             },
 
             _addElements: function() {
                 this.options.forEach(function(itemName) {
-                    var item = document.createElement('li');
-                    item.appendChild(document.createTextNode(itemName));
-                    item.onclick = this._optionChosen.bind(this);
-                    this.$.list.appendChild(item);
+                    this.$.list.appendChild(this._createListItem(itemName));
                 }.bind(this));
             },
 
-            _optionChosen: function(event, detail) {
+            _createListItem: function(name) {
+                var item = document.createElement('li');
+                item.appendChild(document.createTextNode(name));
+                item.onclick = this._optionChosen.bind(this);
+                item.style.height = this._menuOptionHeight();
+                item.style.fontSize = this._menuOptionHeight() * 0.2 + 'px';
+                return item;
+            },
+
+            _menuOptionHeight: function(options) {
+                windowHeight = window.innerHeight;
+                optionsAmount = this.options.length;
+                return windowHeight * 1 / optionsAmount;
+            },
+
+            _optionChosen: function(event) {
                 var option = event.target.innerText;
                 this.fire('option-chosen', option);
+                this._hide();
             }
         });
     </script>
