@@ -1,0 +1,79 @@
+<link rel="import" href="https://polygit.org/components/polymer/polymer.html">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
+
+<dom-module id="main-menu">
+    <template>
+        <style>
+            :host {
+                display: block;
+                width: 100%;
+                text-align: right;
+                font: 400 1rem Roboto, sans-serif;
+                background-color: #eee;
+            }
+
+            .container {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            :host ::content li {
+                cursor: pointer;
+                padding: 0.5rem;
+                opacity: 0.7;
+                background-color: #eee;
+                transition: opacity 0.3s, background-color 0.3s;
+            }
+
+            :host ::content li:hover {
+                opacity: 1;
+                background-color: #ccc;
+            }
+
+            :host ::content li:active {
+                background-color: #bbb;
+            }
+
+        </style>
+
+        <div class="container">
+            <ul id="list"></ul>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'main-menu',
+
+            properties: {
+                options: {
+                    type: Array,
+                    reflectToAttribute: true,
+                    observer: '_addElements'
+                }
+            },
+
+            _addElements: function() {
+                this.options.forEach(function(itemName) {
+                    var item = document.createElement('li');
+                    item.appendChild(document.createTextNode(itemName));
+                    item.onclick = this._optionChosen.bind(this);
+                    this.$.list.appendChild(item);
+                }.bind(this));
+            },
+
+            _optionChosen: function(event, detail) {
+                var option = event.target.innerText;
+                this.fire('option-chosen', option);
+            }
+        });
+    </script>
+</dom-module>
