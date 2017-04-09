@@ -17,7 +17,6 @@
                 align-items: center;
                 cursor: pointer;
                 padding: 0.5rem;
-                width: 100%;
                 opacity: 0.7;
                 background-color: #eee;
                 transition: opacity 0.3s, background-color 0.3s;
@@ -35,6 +34,8 @@
             ul {
                 display: flex;
                 flex-wrap: wrap;
+                width: 100%;
+                justify-content: flex-end;
                 margin: 0;
                 padding: 0;
                 list-style: none;
@@ -62,6 +63,15 @@
             @media only screen and (min-width: 540px) {
                 #icon {
                     display: none;
+                }
+
+                #list {
+                    display: flex !important;
+                }
+
+                :host ::content li {
+                    font-size: 1rem !important;
+                    height: 40px !important;
                 }
             }
 
@@ -96,11 +106,7 @@
                 }
             },
 
-            ready: function() {
-                if (window.innerWidth > 540) {
-                    this.menuVisibility = 'show';
-                }
-            },
+            ready: function() {},
 
             _hide: function() {
                 this.menuVisibility = 'hide';
