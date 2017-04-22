@@ -1,5 +1,4 @@
 <link rel="import" href="/web_components/infrastructure/polymer.html">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
 
 <dom-module id="main-menu">
     <template>
@@ -7,8 +6,7 @@
             :host {
                 width: 100%;
                 text-align: right;
-                font: 400 1rem Roboto, sans-serif;
-                background-color: #eee;
+                font: 400 1rem 'Bree Serif', serif;
             }
 
             :host ::content li {
@@ -80,7 +78,7 @@
             @media only screen and (min-width: 1140px) {}
         </style>
 
-        <div id="container">
+        <div class="container">
             <div id="icon" class$="{{iconState}}" on-click="_toggleIcon"></div>
             <ul id="list" class$="{{menuVisibility}}"></ul>
         </div>
