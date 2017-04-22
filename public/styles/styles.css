@@ -13,12 +13,6 @@ body {
   padding: 0;
 }
 
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
-}
-
 .show {
     display: block !important;
 }

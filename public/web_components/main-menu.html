@@ -39,6 +39,16 @@
                 list-style: none;
             }
 
+            :host ::content .container {
+                background: #eee;
+            }
+
+            :host ::content .menu {
+                width: 90%;
+                max-width: 900px;
+                margin: auto;
+            }
+
             #icon {
                 width: 30px;
                 height: 30px;
@@ -79,8 +89,10 @@
         </style>
 
         <div class="container">
-            <div id="icon" class$="{{iconState}}" on-click="_toggleIcon"></div>
-            <ul id="list" class$="{{menuVisibility}}"></ul>
+            <div class="menu">
+                <div id="icon" class$="{{iconState}}" on-click="_toggleIcon"></div>
+                <ul id="list" class$="{{menuVisibility}}"></ul>
+            </div>
         </div>
     </template>
 

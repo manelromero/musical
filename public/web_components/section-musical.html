@@ -1,10 +1,9 @@
 <link rel="import" href="/web_components/infrastructure/polymer.html">
 
-<dom-module id="page-section">
+<dom-module id="section-musical">
     <template>
         <style>
             :host {
-                width: 100%;
                 font: 400 1.2rem 'Bree Serif', serif;
             }
 
@@ -17,7 +16,16 @@
                 font-size: 1.2rem;
             }
 
-            .content {
+            :host ::content .container {
+                background: #941616;
+                color: #fff;
+                padding: 25px 0;
+            }
+
+            :host ::content .content {
+                width: 90%;
+                max-width: 900px;
+                margin: auto;
                 text-align: center;
             }
 
@@ -72,11 +80,11 @@
                 Joan Albalat, Juan Salinas y Manel Romero
             </div>
         </div>
-    </template>
+</template>
 
     <script>
         Polymer({
-            is: 'page-section',
+            is: 'section-musical',
 
             properties: {
             },

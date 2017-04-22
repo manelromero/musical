@@ -1,0 +1,55 @@
+<link rel="import" href="/web_components/infrastructure/polymer.html">
+
+<dom-module id="section-entradas">
+    <template>
+        <style>
+            :host {
+                font: 400 1.2rem 'Bree Serif', serif;
+            }
+
+            h1 {
+                font: 400 3rem Monoton, cursive;
+            }
+
+            h4 {
+                margin: 25px 0 0 0;
+                font-size: 1.2rem;
+            }
+
+            :host ::content .container {
+                background: #941616;
+                color: #fff;
+                padding: 25px 0;
+            }
+
+            :host ::content .content {
+                width: 90%;
+                max-width: 900px;
+                margin: auto;
+                text-align: center;
+            }
+
+            .recomendation {
+                font-size: 0.9rem;
+            }
+        </style>
+
+        <div class="container">
+            <div class="content">
+                <h1>ENTRADAS</h1>
+            </div>
+        </div>
+</template>
+
+    <script>
+        Polymer({
+            is: 'section-entradas',
+
+            properties: {
+            },
+
+            ready: function() {},
+
+        });
+    </script>
+</dom-module>
