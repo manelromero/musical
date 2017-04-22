@@ -1,5 +1,12 @@
 require 'sinatra'
+require 'sinatra/base'
 
-get '/' do
-  File.read(File.join('public', 'index.html'))
+class App < Sinatra::Base
+  set :public_folder, './public/'
+
+  get '/' do
+    File.read(File.join('public', 'index.html'))
+  end
+
+  run! if app_file == $PROGRAM_NAME
 end
