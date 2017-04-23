@@ -16,6 +16,52 @@
                 font-size: 1.2rem;
             }
 
+            label {
+                display: inline-block;
+                min-width: 90px;
+                padding-bottom: 6px;
+            }
+
+            input {
+                min-width: 300px;
+                font: 400 1.2rem 'Bree Serif', serif;
+                outline: none;
+                padding: 3px 6px;
+                border: 2px solid #941616;
+            }
+
+            textarea {
+                width: 100%;
+                min-height: 120px;
+                font: 400 1.2rem 'Bree Serif', serif;
+                outline: none;
+                padding: 3px 6px;
+                border: 2px solid #941616;
+            }
+
+            button {
+                font: normal 1.2rem 'Bree Serif', serif;
+                padding: 5px 15px;
+                border: 2px solid #941616;
+                background-color: #941616;
+                outline: 0;
+                border-radius: 2px;
+                color: #fff;
+                cursor: pointer;
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+            button:hover,
+            button:focus {
+                background-color: #fff;
+                color: #941616;
+            }
+
+            button:active {
+                background-color: #ccc;
+                color: #941616;
+            }
+
             :host ::content .container {
                 background: #fff;
                 color: #941616;
@@ -29,6 +75,11 @@
                 text-align: center;
             }
 
+            .form-line {
+                text-align: left;
+                padding: 10px 0;
+            }
+
             .recomendation {
                 font-size: 0.9rem;
             }
@@ -37,6 +88,27 @@
         <div class="container">
             <div class="content">
                 <h1>CONTACTO</h1>
+                <form>
+                    <div class="form-line">
+                        <label for="name">Nombre</label>
+                        <input id="name" placeholder="Nombre">
+                    </div>
+                    <div class="form-line">
+                        <label for="mail">Correo</label>
+                        <input id="phone" placeholder="Correo">
+                    </div>
+                    <div class="form-line">
+                        <label for="phone">Teléfono</label>
+                        <input id="mail" placeholder="Teléfono">
+                    </div>
+                    <div class="form-line">
+                        <label for="body">Mensaje</label>
+                        <textarea id="body" placeholder="Escribe aquí tu mensaje"></textarea>
+                    </div>
+                    <div class="form-line">
+                        <button on-click="submit">Enviar</button>
+                    </div>
+                </form>
             </div>
         </div>
 </template>
@@ -45,11 +117,15 @@
         Polymer({
             is: 'contact-form',
 
-            properties: {
-            },
-
-            ready: function() {},
-
+            submit: function() {
+                payload = {
+                    name: this.$.name.value,
+                    mail: this.$.mail.value,
+                    phone: this.$.phone.value,
+                    body: this.$.body.value
+                };
+                this.fire('submit', payload);
+            }
         });
     </script>
 </dom-module>
