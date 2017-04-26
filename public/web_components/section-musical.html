@@ -8,6 +8,11 @@
             }
 
             h1 {
+                font: 400 6rem Monoton, cursive;
+                margin: 0;
+            }
+
+            h2 {
                 font: 400 3rem Monoton, cursive;
             }
 
@@ -19,6 +24,7 @@
             :host ::content .container {
                 min-height: 100vh;
                 display: flex;
+                flex-wrap: wrap;
                 background: #941616;
                 color: #fff;
                 padding: 25px 0;
@@ -31,14 +37,32 @@
                 text-align: center;
             }
 
+            #musical {
+                width: 100%;
+                padding: 0 5%;
+                text-align: center;
+                font-size: 1.8rem;
+                background:
+                    linear-gradient(
+                      rgba(148, 22, 22, 0.3),
+                      rgba(148, 22, 22, 0.3)
+                    ),
+                    url(/styles/images/sala.jpg);
+                /*background-image: url('/styles/images/sala.jpg');*/
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: bottom;
+            }
+
             .recomendation {
                 font-size: 0.9rem;
             }
         </style>
 
         <div class="container">
-            <div class="content">
-                <h1>MUSICAL</h1>
+            <div id="musical">
+                <h1>NAME</h1>
+                <h2>EL MUSICAL</h2>
                 <h3>SINOPSIS</h3>
                 <p>¿Podrías saltar las medidas de alta seguridad de una prisión al ritmo de las canciones de Alaska?</p>
                 <p> Cinco presas, un sueño por cumplir y una ingeniosa estrategia para huir</p>
@@ -46,6 +70,8 @@
                 <div class="recomendation">
                     <p>Edad recomendada: a partir de 12 años. Duración del espectáculo: 1 hora y 45 minutos sin descanso</p>
                 </div>
+            </div>
+            <div class="content">
                 <h3>BANDA SONORA</h3>
                 <p>Atrévete a estar en nuestra <em>Fiesta en el Infierno</em> sin dejar de moverte al ritmo de las canciones de la reina de la movida madrileña, <em>Alaska</em></p>
                 <p>Repasaremos todos sus temas, desde sus comienzos en Kaka Deluxe hasta las canciones más actuales de Fangoria que te harán sentir toda una época</p>
