@@ -1,6 +1,6 @@
 <link rel="import" href="/web_components/infrastructure/polymer.html">
 
-<dom-module id="section-entradas">
+<dom-module id="section-tickets">
     <template>
         <style>
             :host {
@@ -17,6 +17,8 @@
             }
 
             :host ::content .container {
+                min-height: 100vh;
+                display: flex;
                 background: #fff;
                 color: #941616;
                 padding: 25px 0;
@@ -45,7 +47,7 @@
 
     <script>
         Polymer({
-            is: 'section-entradas',
+            is: 'section-tickets',
         });
     </script>
 </dom-module>
