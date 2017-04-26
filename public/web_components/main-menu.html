@@ -4,9 +4,13 @@
     <template>
         <style>
             :host {
+                position: fixed;
                 width: 100%;
                 text-align: right;
                 font: 400 1rem 'Bree Serif', serif;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+                -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+                -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
             }
 
             :host ::content li {
@@ -14,9 +18,10 @@
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;
-                padding: 0.5rem;
+                font: 400 1.5rem/5rem 'Bree Serif', serif;
+                padding: 0 0.5rem;
                 opacity: 0.7;
-                background-color: #eee;
+                background-color: #e0a5a5;
                 transition: opacity 0.3s, background-color 0.3s;
             }
 
@@ -40,11 +45,10 @@
             }
 
             :host ::content .container {
-                background: #eee;
+                background: #e0a5a5;
             }
 
             :host ::content .menu {
-                width: 90%;
                 max-width: 900px;
                 margin: auto;
             }
@@ -78,7 +82,7 @@
                 }
 
                 :host ::content li {
-                    font-size: 1rem !important;
+                    font-size: 1.1rem !important;
                     height: 40px !important;
                 }
             }
@@ -102,7 +106,7 @@
 
             properties: {
                 options: {
-                    type: Array,
+                    type: Object,
                     reflectToAttribute: true,
                     observer: '_addElements'
                 },
@@ -132,17 +136,17 @@
             },
 
             _addElements: function() {
-                this.options.forEach(function(itemName) {
-                    this.$.list.appendChild(this._createListItem(itemName));
-                }.bind(this));
+                for (var key in this.options) {
+                    this.$.list.appendChild(
+                        this._createListItem(this.options[key], key));
+                }
             },
 
-            _createListItem: function(name) {
+            _createListItem: function(sectionName, name) {
                 var item = document.createElement('li');
-                item.appendChild(document.createTextNode(name));
+                item.appendChild(document.createTextNode(sectionName));
+                item.name = name;
                 item.onclick = this._optionChosen.bind(this);
-                item.style.height = this._menuOptionHeight();
-                item.style.fontSize = this._menuOptionHeight() * 0.2 + 'px';
                 return item;
             },
 
@@ -153,7 +157,7 @@
             },
 
             _optionChosen: function(event) {
-                var option = event.target.innerText;
+                var option = event.target.name;
                 this.fire('option-chosen', option);
                 this._hide();
             }
