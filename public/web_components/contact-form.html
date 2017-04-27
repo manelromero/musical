@@ -22,7 +22,7 @@
             }
 
             input {
-                min-width: 400px;
+                min-width: 300px;
                 font: 400 1.2rem 'Bree Serif', serif;
                 outline: none;
                 padding: 3px 6px;
@@ -30,7 +30,7 @@
             }
 
             textarea {
-                min-width: 400px;
+                min-width: 300px;
                 min-height: 200px;
                 font: 400 1.2rem 'Bree Serif', serif;
                 outline: none;
@@ -84,6 +84,18 @@
             .recomendation {
                 font-size: 0.9rem;
             }
+
+            @media only screen and (min-width: 540px) {
+                input,
+                textarea {
+                    min-width: 400px;
+                }
+            }
+
+            @media only screen and (min-width: 720px) {}
+            @media only screen and (min-width: 960px) {}
+            @media only screen and (min-width: 1140px) {}
+
         </style>
 
         <div class="container">

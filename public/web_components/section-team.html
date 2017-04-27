@@ -43,28 +43,29 @@
                 text-align: center;
             }
 
-            :host ::content .left {
-                width: 50%;
-                float: left;
-            }
-
-            :host ::content .right {
-                width: 50%;
-                float: right;
-            }
-
             .recomendation {
                 font-size: 0.9rem;
             }
+
+            @media only screen and (min-width: 540px) {}
+
+            @media only screen and (min-width: 720px) {
+                :host ::content .half {
+                    width: 50%;
+                }
+            }
+
+            @media only screen and (min-width: 960px) {}
+            @media only screen and (min-width: 1140px) {}
         </style>
 
         <div class="container">
             <div class="content">
-                <div class="left">
+                <div class="half">
                     <h3>PRODUCTORES</h3>
                     <p>Somos nuestros propios productores. Autofinanciando todo el espectáculo y buscando la colaboración de diferentes empresas, realizando pequeños espectáculos, llevando a cabo sorteos y asistiendo a diversos eventos con la finalidad de poder realizar la obra.</p>
                 </div>
-                <div class="right">
+                <div class="half">
                     <h3>EQUIPO CREATIVO</h3>
                     <h4>Producción</h4>
                     Desprevenidos Producciones
