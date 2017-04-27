@@ -1,0 +1,75 @@
+<link rel="import" href="/web_components/infrastructure/polymer.html">
+
+<dom-module id="section-soundtrack">
+    <template>
+        <style>
+            :host {
+                font: 400 1.2rem 'Bree Serif', serif;
+            }
+
+            h1 {
+                font: 400 6rem Monoton, cursive;
+                margin: 0;
+            }
+
+            h2 {
+                font: 400 3rem Monoton, cursive;
+            }
+
+            h3 {
+                font: 400 2rem 'Bree Serif', serif;
+                margin: 0;
+            }
+
+            h4 {
+                margin: 25px 0 0 0;
+                font-size: 1.2rem;
+            }
+
+            :host ::content .container {
+                width: 100%;
+                display: flex;
+                padding: 4rem 5%;
+                min-height: 100vh;
+                color: #fff;
+                text-align: center;
+                background:
+                    linear-gradient(
+                      rgba(148, 22, 22, 0.3),
+                      rgba(148, 22, 22, 0.3)
+                    ),
+                    url(/styles/images/disc.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: bottom;
+            }
+
+            :host ::content .content {
+                width: 90%;
+                max-width: 1000px;
+                margin: auto;
+                text-align: center;
+            }
+
+            .recomendation {
+                font-size: 0.9rem;
+            }
+        </style>
+
+        <div class="container">
+            <div class="content">
+                <h3>BANDA SONORA</h3>
+                <p>Atrévete a estar en nuestra <em>Fiesta en el Infierno</em> sin dejar de moverte al ritmo de las canciones de la reina de la movida madrileña, <em>Alaska</em></p>
+                <p>Repasaremos todos sus temas, desde sus comienzos en Kaka Deluxe hasta las canciones más actuales de Fangoria que te harán sentir toda una época</p>
+                <p>Prepárate para bailar, cantar y disfrutar con temas como <em>A quién le importa</em>, <em>Bailando</em>, <em>Ni tú ni nadie</em> y muchos más...</p>
+                <p> ¿Te lo vas a perder?</p>
+            </div>
+        </div>
+</template>
+
+    <script>
+        Polymer({
+            is: 'section-soundtrack',
+        });
+    </script>
+</dom-module>

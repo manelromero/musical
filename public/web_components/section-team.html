@@ -1,0 +1,105 @@
+<link rel="import" href="/web_components/infrastructure/polymer.html">
+
+<dom-module id="section-team">
+    <template>
+        <style>
+            :host {
+                font: 400 1.2rem 'Bree Serif', serif;
+            }
+
+            h1 {
+                font: 400 6rem Monoton, cursive;
+                margin: 0;
+            }
+
+            h2 {
+                font: 400 3rem Monoton, cursive;
+            }
+
+            h3 {
+                font: 400 2rem 'Bree Serif', serif;
+                margin: 0;
+            }
+
+            h4 {
+                margin: 25px 0 0 0;
+                font-size: 1.2rem;
+            }
+
+            :host ::content .container {
+                width: 100%;
+                display: flex;
+                padding: 4rem 5%;
+                min-height: 100vh;
+                background: #941616;
+                color: #fff;
+                text-align: center;
+            }
+
+            :host ::content .content {
+                width: 90%;
+                max-width: 1000px;
+                margin: auto;
+                text-align: center;
+            }
+
+            :host ::content .left {
+                width: 50%;
+                float: left;
+            }
+
+            :host ::content .right {
+                width: 50%;
+                float: right;
+            }
+
+            .recomendation {
+                font-size: 0.9rem;
+            }
+        </style>
+
+        <div class="container">
+            <div class="content">
+                <div class="left">
+                    <h3>PRODUCTORES</h3>
+                    <p>Somos nuestros propios productores. Autofinanciando todo el espectáculo y buscando la colaboración de diferentes empresas, realizando pequeños espectáculos, llevando a cabo sorteos y asistiendo a diversos eventos con la finalidad de poder realizar la obra.</p>
+                </div>
+                <div class="right">
+                    <h3>EQUIPO CREATIVO</h3>
+                    <h4>Producción</h4>
+                    Desprevenidos Producciones
+                    <h4>Libreto</h4>
+                    Nuria Montesinos y Elia López
+                    <h4>Dirección</h4>
+                    Nacho Porcar
+                    <h4>Coreógrafos</h4>
+                    Carla Marco y Leyre Romero
+                    <h4>Arreglos musicales y supervisión</h4>
+                    Rafael López
+                    <h4>Director musical</h4>
+                    Elia López
+                    <h4>Diseño escenografía</h4>
+                    Alba García y Elia López
+                    <h4>Diseño de vestuario</h4>
+                    Paula Yuste y Leyre Romero
+                    <h4>Diseño de maquillaje</h4>
+                    Ana Salmerón
+                    <h4>Diseño de iluminación</h4>
+                    Rafael López
+                    <h4>Diseño de sonido</h4>
+                    Rafael López
+                    <h4>Producción ejecutiva</h4>
+                    Sara Granero y Paula Yuste
+                    <h4>Diseñadores añadidos</h4>
+                    Joan Albalat, Juan Salinas y Manel Romero
+                </div>
+            </div>
+        </div>
+</template>
+
+    <script>
+        Polymer({
+            is: 'section-team',
+        });
+    </script>
+</dom-module>
