@@ -5,6 +5,7 @@
         <style>
             :host {
                 font: 400 1.5rem 'Bree Serif', serif;
+                text-shadow: 1px 1px 2px #000;
             }
 
             h1 {
@@ -28,6 +29,8 @@
 
             .cartel {
                 width: 90%;
+                border: 5px solid #fff;
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
             }
 
             :host ::content .container {
@@ -42,7 +45,7 @@
                       rgba(148, 22, 22, 0.3),
                       rgba(148, 22, 22, 0.3)
                     ),
-                    url(/styles/images/disc.jpg);
+                    url(/styles/images/disc-small.jpg);
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: bottom;
@@ -58,6 +61,15 @@
             @media only screen and (min-width: 540px) {}
 
             @media only screen and (min-width: 720px) {
+                :host ::content .container {
+                    background:
+                        linear-gradient(
+                          rgba(148, 22, 22, 0.3),
+                          rgba(148, 22, 22, 0.3)
+                        ),
+                        url(/styles/images/disc-medium.jpg);
+                }
+
                 .sub-section {
                     width: 50%;
                     float: left;
@@ -65,21 +77,29 @@
             }
 
             @media only screen and (min-width: 960px) {}
-            @media only screen and (min-width: 1140px) {}
-
+            @media only screen and (min-width: 1140px) {
+                :host ::content .container {
+                    background:
+                        linear-gradient(
+                          rgba(148, 22, 22, 0.3),
+                          rgba(148, 22, 22, 0.3)
+                        ),
+                        url(/styles/images/disc-large.jpg);
+                }
+            }
         </style>
 
         <div class="container">
             <div class="content">
-                <div class="sub-section">
-                    <img class="cartel" src="/images/cartel.jpg" alt="Cartel">
-                </div>
                 <div class="sub-section">
                     <h3>BANDA SONORA</h3>
                     <p>Atrévete a estar en nuestra <em>Fiesta en el Infierno</em> sin dejar de moverte al ritmo de las canciones de la reina de la movida madrileña, <em>Alaska</em></p>
                     <p>Repasaremos todos sus temas, desde sus comienzos en Kaka Deluxe hasta las canciones más actuales de Fangoria que te harán sentir toda una época</p>
                     <p>Prepárate para bailar, cantar y disfrutar con temas como <em>A quién le importa</em>, <em>Bailando</em>, <em>Ni tú ni nadie</em> y muchos más...</p>
                     <p> ¿Te lo vas a perder?</p>
+                </div>
+                <div class="sub-section">
+                    <img class="cartel" src="/images/cartel.jpg" alt="Cartel">
                 </div>
             </div>
         </div>
