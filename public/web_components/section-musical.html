@@ -30,7 +30,7 @@
                       rgba(148, 22, 22, 0.3),
                       rgba(148, 22, 22, 0.3)
                     ),
-                    url(/styles/images/sala.jpg);
+                    url(/styles/images/sala-small.jpg);
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: bottom;
@@ -88,6 +88,15 @@
                     font: 400 4rem Monoton, cursive;
                     margin: 0;
                 }
+
+                :host ::content .container {
+                    background:
+                        linear-gradient(
+                          rgba(148, 22, 22, 0.3),
+                          rgba(148, 22, 22, 0.3)
+                        ),
+                        url(/styles/images/sala-medium.jpg);
+                }
             }
 
             @media only screen and (min-width: 960px) {
@@ -96,7 +105,16 @@
                     margin: 0;
                 }
             }
-            @media only screen and (min-width: 1140px) {}
+            @media only screen and (min-width: 1140px) {
+                :host ::content .container {
+                    background:
+                        linear-gradient(
+                          rgba(148, 22, 22, 0.3),
+                          rgba(148, 22, 22, 0.3)
+                        ),
+                        url(/styles/images/sala-large.jpg);
+                }
+            }
         </style>
 
         <div class="container">
