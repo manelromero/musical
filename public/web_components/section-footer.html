@@ -1,0 +1,59 @@
+<link rel="import" href="/web_components/infrastructure/polymer.html">
+
+<dom-module id="section-footer">
+    <template>
+        <style>
+            :host ::content .container {
+                display: flex;
+                min-height: 200px;
+                background: #941616;
+                color: #fff;
+            }
+
+            :host ::content .content {
+                width: 90%;
+                max-width: 900px;
+                margin: auto;
+                text-align: center;
+            }
+
+            .icon {
+                width: 65px;
+                padding-right: 8px;
+                opacity: 1;
+            }
+
+            .icon:hover,
+            .icon:focus {
+                opacity: 0.8;
+            }
+
+            .icon:active {
+                opacity: 1;
+            }
+        </style>
+
+        <div class="container">
+            <div class="content">
+                <a href="https://www.facebook.com/desprevenidosproducciones/?fref=ts">
+                    <img src="/images/facebook.svg" class="icon" alt="facebook">
+                </a>
+                <a href="https://twitter.com/pdesprevenidos">
+                    <img src="/images/twitter.svg" class="icon" alt="twitter">
+                </a>
+                <a href="https://www.instagram.com/desprevenidos.produc/">
+                    <img src="/images/instagram.svg" class="icon" alt="instagram">
+                </a>
+                <a href="https://www.youtube.com/channel/UCi9YeFL7JsRJmZVVvSMB53g">
+                    <img src="/images/youtube.svg" class="icon" alt="youtube">
+                </a>
+            </div>
+        </div>
+</template>
+
+    <script>
+        Polymer({
+            is: 'section-footer',
+        });
+    </script>
+</dom-module>
