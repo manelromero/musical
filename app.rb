@@ -2,7 +2,7 @@ require 'sinatra/base'
 require 'json'
 
 class App < Sinatra::Base
-  set :public_folder, './public/'
+  set :public_folder, 'public'
 
   get '/' do
     File.read(File.join('public', 'index.html'))
@@ -24,6 +24,4 @@ class App < Sinatra::Base
 
     result.to_json
   end
-
-  run! if app_file == $PROGRAM_NAME
 end
