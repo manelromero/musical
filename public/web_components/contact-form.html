@@ -113,15 +113,15 @@
                     </div>
                     <div class="form-line">
                         <label for="mail">Correo</label>
-                        <input id="phone" placeholder="Correo">
+                        <input id="mail" placeholder="Correo">
                     </div>
                     <div class="form-line">
                         <label for="phone">Teléfono</label>
-                        <input id="mail" placeholder="Teléfono">
+                        <input id="phone" placeholder="Teléfono">
                     </div>
                     <div class="form-line">
-                        <label for="content">Mensaje <span class="required">(requerido)<span></label>
-                        <textarea id="content" placeholder="Escribe aquí tu mensaje"></textarea>
+                        <label for="message">Mensaje <span class="required">(requerido)<span></label>
+                        <textarea id="message" placeholder="Escribe aquí tu mensaje"></textarea>
                     </div>
                     <div class="form-line">
                         <button on-click="submit">Enviar</button>
@@ -140,7 +140,7 @@
                     name: this.$.name.value,
                     mail: this.$.mail.value,
                     phone: this.$.phone.value,
-                    content: this.$.content.value
+                    message: this.$.message.value
                 };
                 this.fire('submit-form', payload);
             }

@@ -8,7 +8,7 @@ class Form
         return validation
       end
 
-      if payload['content'] == ''
+      if payload['message'] == ''
         validation[:error] = 'Tienes que introducir un mensaje'
         return validation
       end
@@ -44,7 +44,7 @@ class Form
         #{payload['phone']}
 
         Mensaje
-        #{payload['content']}
+        #{payload['message']}
       MESSAGE
     end
 

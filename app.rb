@@ -13,11 +13,6 @@ class App < Sinatra::Base
   post '/contact' do
     payload = JSON.parse(request.body.read)
     result = Form.validate_data(payload)
-
-    puts '****************'
-    puts result.to_json
-    puts '****************'
-
     Form.send_mail(payload) if result[:ok]
 
     result.to_json
