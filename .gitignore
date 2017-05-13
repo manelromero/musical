@@ -5,7 +5,7 @@ Gemfile.lock
 /test/version_tmp/
 /tmp/
 .ruby-version
-.env
+env
 /.yardoc/
 /_yardoc/
 /doc/

@@ -39,7 +39,7 @@ class App < Sinatra::Base
   end
 
   def password
-    File.open('.env').read.delete("\n")
+    File.open('env').read.delete("\n")
   end
 
   def open_connection
