@@ -4,17 +4,17 @@
     <template>
         <style>
             :host {
-                font: 400 1.2rem 'Bree Serif', serif;
+                font: 400 1.5rem 'Bree Serif', serif;
                 text-shadow: 1px 1px 2px #000;
             }
 
             h1 {
-                font: 400 3rem Monoton, cursive;
+                font: 400 2.5rem Monoton, cursive;
                 margin: 0;
             }
 
             h2 {
-                font: 400 2rem Monoton, cursive;
+                font: 400 1.8rem Monoton, cursive;
             }
 
             :host ::content .container {
@@ -23,7 +23,6 @@
                 padding: 4rem 5%;
                 min-height: 100vh;
                 color: #fff;
-                font-size: 1.8rem;
                 text-align: center;
                 background:
                     linear-gradient(
@@ -50,11 +49,12 @@
                 /*background-color: rgba(0, 0, 0, 0.3);*/
             }
 
-            button {
+            button,
+            button:focus {
                 font: normal 1.2rem 'Bree Serif', serif;
-                padding: 5px 15px;
-                border: 2px solid #941616;
-                background-color: #941616;
+                padding: 3px 15px 7px;
+                border: 2px solid #fff;
+                background-color: rgba(148, 22, 22, 0);
                 outline: 0;
                 border-radius: 2px;
                 color: #fff;
@@ -62,32 +62,33 @@
                 transition: background-color 0.3s, color 0.3s;
             }
 
-            button:hover,
-            button:focus {
+            button:hover {
                 background-color: #fff;
                 color: #941616;
             }
 
             button:active {
-                background-color: #ccc;
-                color: #941616;
+                background-color: #941616;
+                color: #fff;
             }
 
             @media only screen and (min-width: 540px) {
                 h1 {
-                    font: 400 3.5rem Monoton, cursive;
-                    margin: 0;
+                    font: 400 3rem Monoton, cursive;
                 }
 
                 h2 {
-                    font: 400 3rem Monoton, cursive;
+                    font: 400 2rem Monoton, cursive;
                 }
             }
 
             @media only screen and (min-width: 720px) {
                 h1 {
-                    font: 400 4rem Monoton, cursive;
-                    margin: 0;
+                    font: 400 3.5rem Monoton, cursive;
+                }
+
+                h2 {
+                    font: 400 2.2rem Monoton, cursive;
                 }
 
                 :host ::content .container {
@@ -104,12 +105,16 @@
             }
 
             @media only screen and (min-width: 960px) {
-                h1 {
-                    font: 400 4.5rem Monoton, cursive;
-                    margin: 0;
-                }
             }
             @media only screen and (min-width: 1140px) {
+                h1 {
+                    font: 400 4rem Monoton, cursive;
+                }
+
+                h2 {
+                    font: 400 2.5rem Monoton, cursive;
+                }
+
                 :host ::content .container {
                     background:
                         linear-gradient(
