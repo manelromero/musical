@@ -3,6 +3,7 @@ Class('Home.Container', {
     initialize: function() {
         this.createMenu();
         this.contact = document.getElementById('contact');
+        this.modal = document.getElementById('modal');
         this.addListeners();
         this.subscribe();
     },
@@ -33,7 +34,11 @@ Class('Home.Container', {
     },
 
     showModal: function(result) {
-        console.log(result);
+        if (result.ok) {
+            console.log('YES');
+        } else {
+            this.modal.style.display = 'block';
+        }
     },
 
     subscribe: function() {
