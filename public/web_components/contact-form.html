@@ -85,6 +85,11 @@
                 font-size: 0.9rem;
             }
 
+            .required {
+                font: 400 0.9rem 'Bree Serif', serif;
+                color: #999;
+            }
+
             @media only screen and (min-width: 540px) {
                 input,
                 textarea {
@@ -103,7 +108,7 @@
                 <h1>CONTACTO</h1>
                 <form>
                     <div class="form-line">
-                        <label for="name">Nombre</label>
+                        <label for="name">Nombre <span class="required">(requerido)<span></label>
                         <input id="name" placeholder="Nombre">
                     </div>
                     <div class="form-line">
@@ -115,8 +120,8 @@
                         <input id="mail" placeholder="Teléfono">
                     </div>
                     <div class="form-line">
-                        <label for="body">Mensaje</label>
-                        <textarea id="body" placeholder="Escribe aquí tu mensaje"></textarea>
+                        <label for="content">Mensaje <span class="required">(requerido)<span></label>
+                        <textarea id="content" placeholder="Escribe aquí tu mensaje"></textarea>
                     </div>
                     <div class="form-line">
                         <button on-click="submit">Enviar</button>
@@ -135,9 +140,9 @@
                     name: this.$.name.value,
                     mail: this.$.mail.value,
                     phone: this.$.phone.value,
-                    body: this.$.body.value
+                    content: this.$.content.value
                 };
-                this.fire('submit', payload);
+                this.fire('submit-form', payload);
             }
         });
     </script>

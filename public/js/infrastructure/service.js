@@ -1,16 +1,11 @@
-var Service = function() {
+Class('Service', {
 
-    var contact = function(data) {
-        doRequest('/contact', data, function() {
-           Bus.publish('contact.sent');
-        });
-    };
-
-    var doRequest = function(endpoint, data, callback) {
+    doRequest: function(endpoint, data, callback) {
+        var endpointURL = endpoint;
         var request = new XMLHttpRequest();
         var OK = 200;
 
-        request.open('POST', endpoint);
+        request.open('POST', endpointURL);
         request.setRequestHeader('Content-Type', 'application/json');
         request.onreadystatechange = function() {
             if (request.readyState === XMLHttpRequest.DONE) {
@@ -20,8 +15,6 @@ var Service = function() {
             }
         };
         request.send(JSON.stringify(data));
-    };
+    }
 
-    Bus.subscribe('contact.send', contact);
-
-};
+});
