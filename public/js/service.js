@@ -1,8 +1,8 @@
 var Service = function() {
 
     var contact = function(data) {
-        doRequest('/contact', data, function(result) {
-           console.log(result);
+        doRequest('/contact', data, function() {
+           Bus.publish('contact.sent');
         });
     };
 
@@ -22,6 +22,6 @@ var Service = function() {
         request.send(JSON.stringify(data));
     };
 
-    Bus.subscribe('post.sent', contact);
+    Bus.subscribe('contact.send', contact);
 
 };

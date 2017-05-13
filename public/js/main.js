@@ -13,7 +13,7 @@ function main() {
         });
 
         form.addEventListener('submit', function(message) {
-            Bus.publish('post.sent', message.detail);
+            Bus.publish('contact.send', message.detail);
         });
 
         menu.options = {
@@ -22,5 +22,11 @@ function main() {
             whoWeAre: 'Quiénes somos',
             contact: 'Contacto'
         };
+
+        showModal = function() {
+            console.log('SENT!');
+        };
+
+        Bus.subscribe('contact.sent', showModal());
     });
 }
