@@ -38,6 +38,10 @@ class App < Sinatra::Base
     MESSAGE
   end
 
+  def password
+    File.open('.env').read.delete("\n")
+  end
+
   def open_connection
     @smtp = Net::SMTP.start(
       'authsmtp.desprevenidosproducciones.com',
