@@ -6,16 +6,34 @@
             :host ::content .container {
                 width: 100%;
                 display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
                 padding: 4rem 5%;
                 min-height: 100vh;
                 background: #941616;
                 color: #fff;
-                text-align: center;
+            }
+
+            img {
+                width: 80%;
+                height: auto;
+                padding: 10%;
+            }
+
+            @media only screen and (min-width: 960px) {
+                img {
+                    width: 44%;
+                    height: auto;
+                    padding: 3%;
+                }
             }
         </style>
 
         <div class="container">
-            AMIGOS
+            <img src="/images/edae.svg" alt="EDAE">
+            <img src="/images/luis-marco.svg" alt="Luis Marco">
+            <img src="/images/motorama.svg" alt="Motorama">
+            <img src="/images/m-contract.svg" alt="m contract">
         </div>
 </template>
 
