@@ -14,8 +14,16 @@
                 color: #fff;
             }
 
+            :host ::content .content {
+                width: 90%;
+                max-width: 1000px;
+                margin: auto;
+                text-align: center;
+            }
+
             img {
                 width: 80%;
+                max-width: 500px;
                 height: auto;
                 padding: 10%;
             }
@@ -30,10 +38,12 @@
         </style>
 
         <div class="container">
-            <img src="/images/edae.svg" alt="EDAE">
-            <img src="/images/luis-marco.svg" alt="Luis Marco">
-            <img src="/images/motorama.svg" alt="Motorama">
-            <img src="/images/m-contract.svg" alt="m contract">
+            <div class="content">
+                <img src="/images/edae.svg" alt="EDAE">
+                <img src="/images/luis-marco.svg" alt="Luis Marco">
+                <img src="/images/motorama.svg" alt="Motorama">
+                <img src="/images/m-contract.svg" alt="m contract">
+            </div>
         </div>
 </template>
 
