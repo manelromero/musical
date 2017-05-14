@@ -46,39 +46,3 @@ body {
 .link:focus {
   border-bottom-color: rgba(0, 0, 0, 1);
 }
-
-.modal {
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-.message {
-  position: fixed;
-  width: 80vw;
-  top: 30%;
-  left: 10%;
-  font: 400 1rem 'Bree Serif', serif;
-  text-align: center;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-}
-
-.close {
-  position: absolute;
-  font: bold 1rem sans-serif;
-  top: 5px;
-  right: 6px;
-  opacity: 0.6
-}
-
-.close:hover {
-  opacity: 1;
-}

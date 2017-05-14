@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
         <link rel="stylesheet" href="/styles/styles.css">
         <link rel="import" href="/web_components/main-menu.html">
+        <link rel="import" href="/web_components/modal-window.html">
         <link rel="import" href="/web_components/section-musical.html">
         <link rel="import" href="/web_components/section-soundtrack.html">
         <link rel="import" href="/web_components/section-team.html">
@@ -19,12 +20,7 @@
     </head>
     <body>
         <main-menu id="menu"></main-menu>
-        <div id="modal" class="modal">
-            <div class="message">
-                Formulario incompleto, por favor revisa los datos.
-                <span class="close">x</span>
-            </div>
-        </div>
+        <modal-window id="modal"></modal-window>
         <section-musical id="music" class="section"></section-musical>
         <section-soundtrack id="soundtrack" class="section"></section-soundtrack>
         <section-team id="team" class="section"></section-team>
@@ -42,6 +38,7 @@
         <script src="/js/infrastructure/scroll.js"></script>
 
         <script src="/js/components/container.js"></script>
+        <script src="/js/components/modal.js"></script>
         <script src="/js/components/form.js"></script>
 
         <script src="/js/services/home.js"></script>

@@ -4,16 +4,17 @@ class Form
       validation = { ok: false }
 
       if payload['name'] == ''
-        validation[:error] = 'Tienes que introducir un nombre'
+        validation[:message] = 'Tienes que introducir un nombre.'
         return validation
       end
 
       if payload['message'] == ''
-        validation[:error] = 'Tienes que introducir un mensaje'
+        validation[:message] = 'Tienes que introducir un mensaje.'
         return validation
       end
 
       validation[:ok] = true
+      validation[:message] = 'Mensaje enviado, gracias.'
       validation
     end
 

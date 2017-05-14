@@ -101,7 +101,6 @@
             @media only screen and (min-width: 720px) {}
             @media only screen and (min-width: 960px) {}
             @media only screen and (min-width: 1140px) {}
-
         </style>
 
         <div class="container">
@@ -136,7 +135,9 @@
         Polymer({
             is: 'section-contact',
 
-            submit: function() {
+            submit: function(event) {
+                event.preventDefault();
+
                 payload = {
                     name: this.$.name.value,
                     mail: this.$.mail.value,
@@ -144,6 +145,13 @@
                     message: this.$.message.value
                 };
                 this.fire('submit-form', payload);
+            },
+
+            empty: function() {
+                this.$.name.value = null;
+                this.$.mail.value = null;
+                this.$.phone.value = null;
+                this.$.message.value = null;
             }
         });
     </script>
