@@ -10,7 +10,7 @@ Class('Service', {
         request.onreadystatechange = function() {
             if (request.readyState === XMLHttpRequest.DONE) {
                 if (request.status === OK) {
-                    callback (JSON.parse(request.responseText));
+                    callback(JSON.parse(request.responseText));
                 }
             }
         };
