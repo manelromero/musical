@@ -7,13 +7,9 @@
                 font: 400 1.2rem 'Bree Serif', serif;
             }
 
-            h1 {
-                font: 400 3rem Monoton, cursive;
-            }
-
-            h4 {
-                margin: 25px 0 0 0;
-                font-size: 1.2rem;
+            h2 {
+                font: 400 2.5rem Monoton, cursive;
+                margin: 0 0 30px;
             }
 
             label {
@@ -97,11 +93,18 @@
                     min-width: 400px;
                 }
             }
+
+            @media only screen and (min-width: 720px) {
+                h2 {
+                    font: 400 3rem Monoton, cursive;
+                }
+            }
+
         </style>
 
         <div class="container">
             <div class="content">
-                <h1>CONTACTO</h1>
+                <h2>CONTACTO</h2>
                 <form>
                     <div class="form-line">
                         <label for="name">Nombre <span class="required">(requerido)<span></label>

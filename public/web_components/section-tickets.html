@@ -4,16 +4,7 @@
     <template>
         <style>
             :host {
-                font: 400 1.4rem 'Bree Serif', serif;
-            }
-
-            h1 {
-                font: 400 3rem Monoton, cursive;
-            }
-
-            h2 {
-                font: 400 2rem 'Bree Serif', serif;
-                margin: 0;
+                font: 400 1.2rem 'Bree Serif', serif;
             }
 
             :host ::content .container {
@@ -26,6 +17,11 @@
                 padding: 25px 0;
             }
 
+            h2 {
+                font: 400 2.5rem Monoton, cursive;
+                margin: 0 0 30px;
+            }
+
             :host ::content .content {
                 width: 90%;
                 max-width: 1000px;
@@ -34,15 +30,29 @@
             }
 
             .logo {
-                width: 300px;
+                width: 250px;
                 display: block;
                 margin: auto;
+            }
+
+            @media only screen and (min-width: 720px) {
+                :host {
+                    font: 400 1.3rem 'Bree Serif', serif;
+                }
+
+                h2 {
+                    font: 400 3rem Monoton, cursive;
+                }
+
+                .logo {
+                    width: 300px;
+                }
             }
         </style>
 
         <div class="container">
             <div class="content">
-                <h1>ENTRADAS</h1>
+                <h2>ENTRADAS</h2>
                 <div class="logo">
                     <a href="http://www.salacarolina.com/" target="_blank">
                         <img src="/images/sala-carolina.svg" alt="Sala Carolina">
