@@ -24,7 +24,7 @@ class Form
 
       smtp.send_message mail,
                         'contact@desprevenidosproducciones.com',
-                        'manel@manelromero.cat'
+                        'info@desprevenidosproducciones.com'
       smtp.finish
     end
 
