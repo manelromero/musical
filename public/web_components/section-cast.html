@@ -20,13 +20,140 @@
                 text-align: center;
             }
 
-            h4 {
+            h2 {
+                font: 400 1.8rem Monoton, cursive;
+                margin: 0;
+            }
+
+            h3 {
+                width: 100%;
                 font-size: 1.4rem;
-                margin: 25px 0 0 0;
+                margin: 25px 0;
             }
 
             .dancer {
                 width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .picture {
+                width: 300px;
+                height: 400px;
+            }
+
+            .bio {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .jonathan-carro {
+                background:
+                    linear-gradient(
+                      rgba(148, 22, 22, 0.3),
+                      rgba(148, 22, 22, 0.3)
+                    ),
+                    url(/images/jonathan_carro.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center top;
+            }
+
+            .sara-granero {
+                background:
+                    linear-gradient(
+                      rgba(148, 22, 22, 0.3),
+                      rgba(148, 22, 22, 0.3)
+                    ),
+                    url(/images/sara_granero.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center top;
+            }
+
+            .carla-marco {
+                background:
+                    linear-gradient(
+                      rgba(148, 22, 22, 0.3),
+                      rgba(148, 22, 22, 0.3)
+                    ),
+                    url(/images/carla_marco.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center top;
+            }
+
+            .elia-lopez {
+                background:
+                    linear-gradient(
+                      rgba(148, 22, 22, 0.3),
+                      rgba(148, 22, 22, 0.3)
+                    ),
+                    url(/images/elia_lopez.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center top;
+            }
+
+            .nuria-montesinos {
+                background:
+                    linear-gradient(
+                      rgba(148, 22, 22, 0.3),
+                      rgba(148, 22, 22, 0.3)
+                    ),
+                    url(/images/nuria_montesinos.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center top;
+            }
+
+            .nacho-porcar {
+                background:
+                    linear-gradient(
+                      rgba(148, 22, 22, 0.3),
+                      rgba(148, 22, 22, 0.3)
+                    ),
+                    url(/images/nacho_porcar.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center top;
+            }
+
+            .leyre-romero {
+                background:
+                    linear-gradient(
+                      rgba(148, 22, 22, 0.3),
+                      rgba(148, 22, 22, 0.3)
+                    ),
+                    url(/images/leyre_romero.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center top;
+            }
+
+            .paula-yuste {
+                background:
+                    linear-gradient(
+                      rgba(148, 22, 22, 0.3),
+                      rgba(148, 22, 22, 0.3)
+                    ),
+                    url(/images/paula_yuste.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center top;
+            }
+
+            .nacho-rodriguez {
+                background:
+                    linear-gradient(
+                      rgba(148, 22, 22, 0.3),
+                      rgba(148, 22, 22, 0.3)
+                    ),
+                    url(/images/nacho_rodriguez.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center top;
             }
 
             @media only screen and (min-width: 720px) {
@@ -34,57 +161,87 @@
                     font: 400 1.3rem 'Bree Serif', serif;
                 }
 
-                h4 {
+                h2 {
+                    font: 400 2rem Monoton, cursive;
+                }
+
+                h3 {
                     font-size: 1.5rem;
+                }
+            }
+
+            @media only screen and (min-width: 1140px) {
+                h2 {
+                    font: 400 2.5rem Monoton, cursive;
+                }
+
+                h3 {
+                    text-align: left;
+                }
+
+                .picture {
+                    width: 35%;
+                    height: 400px;
+                }
+
+                .bio {
+                    width: 60%;
+                    margin-left: 5%;
                 }
             }
         </style>
 
         <div class="container">
             <div class="content">
+                <h2>ELENCO</h2>
                 <div class="dancer">
-                    <h4>Jonathan Carro</h4>
-                    <p>De procedencia gallega comenzó su formación de gimnasia rítmica con 12 años. Entre sus estudios destaca el ballet, el jazz y el contemporáneo como la danza urbana, además de su gran formación en teatro musical.</p>
+                    <h3>Jonathan Carro</h3>
+                    <div class="picture jonathan-carro"></div>
+                    <p class="bio">De procedencia gallega comenzó su formación de gimnasia rítmica con 12 años. Entre sus estudios destaca el ballet, el jazz y el contemporáneo como la danza urbana, además de su gran formación en teatro musical.</p>
                 </div>
                 <div class="dancer">
-                    <h4>Sara Granero</h4>
-                    <p></p>
+                    <h3>Sara Granero</h3>
+                    <div class="picture sara-granero"></div>
+                    <p class="bio">Bailarina nacida en Valencia, comienza a formarse desde una temprana edad en distintas escuelas de baile de estilo ballet, jazz-lírico, moderno, danza del vientre... Además de trabajar en musicales como “Aladino la princesa Safira”. Actual componente de Moonlight Producciones. </p>
                 </div>
                 <div class="dancer">
-                    <h4></h4>
-                    <p>Bailarina nacida en Valencia, comienza a formarse desde una temprana edad en distintas escuelas de baile de estilo ballet, jazz-lírico, moderno, danza del vientre... Además de trabajar en musicales como “Aladino la princesa Safira”. Actual componente de Moonlight Producciones. </p>
+                    <h3>Carla Marco</h3>
+                    <div class="picture carla-marco"></div>
+                    <p class="bio">Valencia, 1998. Formada en teatro musical y danza en EDAE Sergio Alcover y en Home Dance Studio. Entre sus estilos destacan la danza urbana, el jazz y la danza contemporánea. Además compite a nivel nacional con el grupo de danza Homies.</p>
                 </div>
                 <div class="dancer">
-                    <h4>Carla Marco</h4>
-                    <p>Valencia, 1998. Formada en teatro musical y danza en EDAE Sergio Alcover y en Home Dance Studio. Entre sus estilos destacan la danza urbana, el jazz y la danza contemporánea. Además compite a nivel nacional con el grupo de danza Homies.</p>
+                    <h3>Elia López</h3>
+                    <div class="picture elia-lopez"></div>
+                    <p class="bio">Nacida en Valencia hace 24 años. Cuenta con una amplia formación en teatro musical, interpretación y estilos de bailes tales como claqué, ballet y urbano. Además de ser partícipe de varios espectáculos infantiles.</p>
                 </div>
                 <div class="dancer">
-                    <h4>Elia López</h4>
-                    <p>Nacida en Valencia hace 24 años. Cuenta con una amplia formación en teatro musical, interpretación y estilos de bailes tales como claqué, ballet y urbano. Además de ser partícipe de varios espectáculos infantiles.</p>
+                    <h3>Nuria Montesinos</h3>
+                    <div class="picture nuria-montesinos"></div>
+                    <p class="bio">Cantante, actriz y saxofonista valenciana. Formada en estilos de danza como el ballet, el funky y el claqué. Formó parte de los pequeños cantores de Valencia, realizando varias giras por Europa. Actualmente forma parte de una de las orquestras más importantes de Valencia.</p>
                 </div>
                 <div class="dancer">
-                    <h4>Nuria Montesinos</h4>
-                    <p>Cantante, actriz y saxofonista valenciana. Formada en estilos de danza como el ballet, el funky y el claqué. Formó parte de los pequeños cantores de Valencia, realizando varias giras por Europa. Actualmente forma parte de una de las orquestras más importantes de Valencia.</p>
+                    <h3>Nacho Porcar</h3>
+                    <div class="picture nacho-porcar"></div>
+                    <p class="bio">Nació en Valencia. Formado en teatro y canto en EDAE Sergio Alcover y en distintas disciplinas como el ballet, el tap dance, danza jazz, y urbano entre otros estilos. Actualmente continúa sus estudios en teatro musical en EDAE Sergio Alcover.</p>
                 </div>
                 <div class="dancer">
-                    <h4>Nacho Porcar</h4>
-                    <p>Nació en Valencia. Formado en teatro y canto en EDAE Sergio Alcover y en distintas disciplinas como el ballet, el tap dance, danza jazz, y urbano entre otros estilos. Actualmente continúa sus estudios en teatro musical en EDAE Sergio Alcover.</p>
+                    <h3>Leyre Romero</h3>
+                    <div class="picture leyre-romero"></div>
+                    <p class="bio">De Barcelona. Además de continuar ampliando su formación de danza en diferentes estilos que continúa hoy en día, ha trabajado como modelo de fotografía para líneas de ropa como “Friday” o “La Contro”. Ha realizado cortometrajes como “Piluca” y ha sido componente de la webserie “4 sueños 2 destinos” como actriz y guionista. Hoy en día continúa formándose en EDAE Sergio Alcover.</p>
                 </div>
                 <div class="dancer">
-                    <h4>Leyre Romero</h4>
-                    <p>De Barcelona. Además de continuar ampliando su formación de danza en diferentes estilos que continúa hoy en día, ha trabajado como modelo de fotografía para líneas de ropa como “Friday” o “La Contro”. Ha realizado cortometrajes como “Piluca” y ha sido componente de la webserie “4 sueños 2 destinos” como actriz y guionista. Hoy en día continúa formándose en EDAE Sergio Alcover.</p>
+                    <h3>Paula Yuste</h3>
+                    <div class="picture paula-yuste"></div>
+                    <p class="bio">Actriz y cantante valenciana. Ha participado en varios cortometrajes como “Be afraid of the dark”, “Piluca” y “El elefante rosa” además de su trabajo en el musical “Duland”. Hoy en día continúa formándose en EDAE Sergio Alcover.</p>
                 </div>
                 <div class="dancer">
-                    <h4>Paula Yuste</h4>
-                    <p>Actriz y cantante valenciana. Ha participado en varios cortometrajes como “Be afraid of the dark”, “Piluca” y “El elefante rosa” además de su trabajo en el musical “Duland”. Hoy en día continúa formándose en EDAE Sergio Alcover.</p>
-                </div>
-                <div class="dancer">
-                    <h4>Nacho Rodríguez</h4>
-                    <p>A la edad de 12 años, destacan sus papeles interpretando a “Chip” en el musical de “La Bella y la Bestia” y a Gavroche en “Los Miserables”. Además de tener una amplia formación musical, actoral y de danza, en escuelas como EDAE Sergio Alcover, Maria Carbonell o en la Escuela de Actores de El Rey León.</p>
+                    <h3>Nacho Rodríguez</h3>
+                    <div class="picture nacho-rodriguez"></div>
+                    <p class="bio">A la edad de 12 años, destacan sus papeles interpretando a “Chip” en el musical de “La Bella y la Bestia” y a Gavroche en “Los Miserables”. Además de tener una amplia formación musical, actoral y de danza, en escuelas como EDAE Sergio Alcover, Maria Carbonell o en la Escuela de Actores de El Rey León.</p>
                 </div>
             </div>
         </div>
-</template>
+    </template>
 
     <script>
         Polymer({

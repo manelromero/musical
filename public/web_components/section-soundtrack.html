@@ -4,33 +4,8 @@
     <template>
         <style>
             :host {
-                font: 400 1.3rem 'Bree Serif', serif;
+                font: 400 1.2rem 'Bree Serif', serif;
                 text-shadow: 1px 1px 2px #000;
-            }
-
-            h1 {
-                font: 400 6rem Monoton, cursive;
-                margin: 0;
-            }
-
-            h2 {
-                font: 400 3rem Monoton, cursive;
-            }
-
-            h3 {
-                font: 400 2rem Monoton, cursive;
-                margin: 0;
-            }
-
-            h4 {
-                margin: 25px 0 0 0;
-                font-size: 1.2rem;
-            }
-
-            .cartel {
-                width: 90%;
-                border: 5px solid #fff;
-                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
             }
 
             :host ::content .container {
@@ -58,6 +33,18 @@
                 text-align: center;
             }
 
+            h2 {
+                font: 400 1.8rem Monoton, cursive;
+                margin: 0;
+            }
+
+            .cartel {
+                width: 90%;
+                border: 5px solid #fff;
+                margin: 20px auto;
+                box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
+            }
+
             @media only screen and (min-width: 540px) {}
 
             @media only screen and (min-width: 720px) {
@@ -71,6 +58,10 @@
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center bottom;
+                }
+
+                h2 {
+                    font: 400 2rem Monoton, cursive;
                 }
 
                 .sub-section {
@@ -91,13 +82,17 @@
                     background-repeat: no-repeat;
                     background-position: center bottom;
                 }
+
+                h2 {
+                    font: 400 2.5rem Monoton, cursive;
+                }
             }
         </style>
 
         <div class="container">
             <div class="content">
                 <div class="sub-section">
-                    <h3>BANDA SONORA</h3>
+                    <h2>BANDA SONORA</h2>
                     <p>Atrévete a estar en nuestra <em>Fiesta en el Infierno</em> sin dejar de moverte al ritmo de las canciones de la reina de la movida madrileña, <em>Alaska</em></p>
                     <p>Repasaremos todos sus temas, desde sus comienzos en Kaka Deluxe hasta las canciones más actuales de Fangoria que te harán sentir toda una época</p>
                     <p>Prepárate para bailar, cantar y disfrutar con temas como <em>A quién le importa</em>, <em>Bailando</em>, <em>Ni tú ni nadie</em> y muchos más...</p>
@@ -108,7 +103,7 @@
                 </div>
             </div>
         </div>
-</template>
+    </template>
 
     <script>
         Polymer({

@@ -4,11 +4,11 @@
     <template>
         <style>
             :host {
-                font: 400 1.4rem 'Bree Serif', serif;
+                font: 400 1.2rem 'Bree Serif', serif;
             }
 
             h2 {
-                font: 400 2.5rem Monoton, cursive;
+                font: 400 1.8rem Monoton, cursive;
                 margin: 0 0 30px;
             }
 
@@ -33,13 +33,21 @@
 
             @media only screen and (min-width: 720px) {
                 :host {
-                    font: 400 1.5rem 'Bree Serif', serif;
+                    font: 400 1.3rem 'Bree Serif', serif;
                 }
 
                 h2 {
-                    font: 400 3rem Monoton, cursive;
+                    font: 400 2rem Monoton, cursive;
                 }
             }
+
+            @media only screen and (min-width: 1140px) {
+                h2 {
+                    font: 400 2.5rem Monoton, cursive;
+                }
+
+            }
+
         </style>
 
         <div class="container">
@@ -48,10 +56,9 @@
                 <p>Desprevenidos Producciones es una compañía formada por jóvenes artistas, que nace de la vocación y el amor por las artes escénicas de cada uno de sus componentes</p>
                 <p>Apostamos por una filosofía basada en la dedicación, el sacrificio, la ilusión y el amor</p>
                 <a href="http://www.elperiodic.com/noticias/483176" class="link" target="_blank">PRENSA</a>
-
             </div>
         </div>
-</template>
+    </template>
 
     <script>
         Polymer({
